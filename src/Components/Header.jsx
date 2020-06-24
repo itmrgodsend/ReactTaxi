@@ -6,11 +6,11 @@ const Header = () => {
         <div className='Header'>
 
             <div className='title'></div>
-            <ul className="menu">
-                <li><a href="#">Карта</a></li>
-                <li><a href="#">Профиль</a></li>
-                <li><a href="#">Логин</a></li>
-            </ul>
+            <span className='menu'>
+                <a className='text' href="#">Карта</a>
+                <a className='text' href="#">Профиль</a>
+                <a className='text' href="#">Логин</a>
+            </span>
         </div>
     )
 }
