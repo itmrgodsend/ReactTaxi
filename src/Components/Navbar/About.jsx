@@ -1,14 +1,14 @@
 import React from "react";
 import '../../App.css';
 
-const Profile = () => {
+const About = () => {
     return (
         <div>
-            Profile
+            About
         </div>
     )
 }
 
 
 
-export default Profile;
+export default About;
