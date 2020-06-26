@@ -1,14 +1,14 @@
 import React from "react";
 import '../../App.css';
 
-const About = () => {
+const Map = () => {
     return (
         <div>
-            About
+            Map
         </div>
     )
 }
 
 
 
-export default About;
+export default Map;
