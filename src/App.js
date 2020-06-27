@@ -4,17 +4,17 @@ import Login from "./Components/Navbar/Login";
 import Map from "./Components/Navbar/Map";
 import Profile from "./Components/Navbar/Profile";
 
-const PAGES = {
-    home: <Login/>,
-    about: <Map/>,
+export const PAGES = {
+    login: <Login/>,
+    map: <Map/>,
     profile: <Profile/>
 }
 
 class App extends React.Component {
 
-    state = {currentPage: 'home'}
+    state = {currentPage: 'login'}
 
-    navigateTo = (page) => {
+  navigateTo = (page) => {
         this.setState({currentPage: page})
     }
 
@@ -27,13 +27,13 @@ class App extends React.Component {
                         <ul>
                             <li className='menu'>
                                 <button className='text' onClick={() => {
-                                    this.navigateTo('home')
+                                    this.navigateTo('login')
                                 }}>Login
                                 </button>
                             </li>
                             <li className='menu'>
                                 <button className='text' onClick={() => {
-                                    this.navigateTo('about')
+                                    this.navigateTo('map')
                                 }}>Map
                                 </button>
                             </li>
