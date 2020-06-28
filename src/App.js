@@ -4,11 +4,7 @@ import Login from "./Components/Navbar/Login";
 import Map from "./Components/Navbar/Map";
 import Profile from "./Components/Navbar/Profile";
 
-export const PAGES = {
-    login: <Login/>,
-    map: <Map/>,
-    profile: <Profile/>
-}
+
 
 class App extends React.Component {
 
@@ -18,7 +14,14 @@ class App extends React.Component {
         this.setState({currentPage: page})
     }
 
+    PAGES = {
+        login: <Login navigateTo={this.navigateTo} />,
+        map: <Map/>,
+        profile: <Profile/>
+    }
+
     render() {
+        const { currentPage } = this.state;
         return (
             <div>
                 <header>
@@ -48,7 +51,7 @@ class App extends React.Component {
                 </header>
 
                 <main>
-                    <section>{PAGES[this.state.currentPage]}</section>
+                    <section>{this.PAGES[currentPage]}</section>
                 </main>
             </div>
         );
