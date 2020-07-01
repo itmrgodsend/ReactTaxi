@@ -1,10 +1,16 @@
 import React from "react";
 import '../../App.css';
 import App from "../../App";
-
+import PropTypes from 'prop-types'
 
 
 const Login = (props) => {
+
+    Login.propTypes = {
+        email: PropTypes.string,
+        password: PropTypes.number
+    }
+
     const {navigateTo} = props;
 
     return (

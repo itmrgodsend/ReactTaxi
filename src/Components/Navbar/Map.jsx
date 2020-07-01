@@ -1,11 +1,15 @@
 import React from "react";
 import '../../App.css';
 import mapboxgl from "mapbox-gl";
+import PropTypes from 'prop-types'
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaXRtcmdvZHNlbmQiLCJhIjoiY2tjM2UxN3U1MjcxdzJxbzRxNnRlMzN6OCJ9.t7HmuC1JYzCb4B98PzYXbg';
 
 class Map extends React.Component {
+
+
+
     constructor(props) {
         super(props);
         this.state = {
