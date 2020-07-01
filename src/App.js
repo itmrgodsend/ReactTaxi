@@ -48,6 +48,7 @@ class App extends React.Component {
                             </li>
                         </ul>
                     </nav>
+
                 </header>
 
                 <main>
