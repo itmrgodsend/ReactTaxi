@@ -32,7 +32,7 @@ class Map extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='mapWrapper'>
                 <div className='sidebarStyle'>
                     <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
                 </div>
