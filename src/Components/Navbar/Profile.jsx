@@ -1,21 +1,21 @@
-import React from "react";
-import '../../App.css';
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import { withAuth } from "../../AuthContext";
 
+export class Profile extends Component {
+    unauthenticate = (event) => {
+        event.preventDefault();
+        this.props.logOut();
+        this.props.navigate("home");
+    };
 
-const Profile = () => {
-
-    Profile.propTypes = {
-
+    render() {
+        return (
+            <p>
+                Profile.
+                <button onClick={this.unauthenticate}>Log out</button>
+            </p>
+        );
     }
-
-    return (
-        <div>
-            Profile
-        </div>
-    )
 }
 
-
-
-export default Profile;
+export const ProfileWithAuth = withAuth(Profile);
